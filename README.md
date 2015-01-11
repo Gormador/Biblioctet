@@ -1,7 +1,7 @@
 biblioctect-project
 ===================
 
-Repo for our "Advanced web programmation" 4th year class at the ESIEA. Teacher: Antoine Garnier-Castellane
+Repo for our "Advanced web programmation" 4th year class at the ESIEA. Teacher: A. G.-C.
 
 
 /!\ ajouter au fichier app/config/app.php
