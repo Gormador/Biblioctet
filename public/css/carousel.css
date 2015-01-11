@@ -1,0 +1,45 @@
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.col-md-4 .img-thumbnail {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.col-md-8 > h5 {
+  text-align: left;
+}
+
+.col-md-8 > p {
+  text-align: justify;
+  font-size: 105%;
+  font-style: italic;
+}
+
+/* Carousel base class */
+.carousel {
+  background-image: url('../ressources/images/backgrounds/90096.png');
+  background-repeat: repeat;
+  border-color: #E8F3F8;
+  color: none !important;
+  margin-top: 11px;
+  height: 455px;
+  margin-bottom: 5px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 455px;
+  /*background-color: #777;*/
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 455px;
+}

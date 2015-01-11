@@ -1,0 +1,53 @@
+
+#login {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0px auto;
+	/*box-sizing: border-box;*/
+}
+
+#register {
+	max-width: 460px;
+	padding: 15px;
+	margin: 0px auto;
+	/*box-sizing: border-box;*/
+}
+
+.panel .form-group {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	width: 95%;
+	max-width: 95%;
+}
+
+#register .form-control {
+	margin-bottom: 2%;
+	margin-top: 1%;
+	margin-right: 5%;
+	/*max-width: 100%;*/
+	/*max-width: 50% !important;*/
+
+}
+
+.form-group .form-control {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.panel {
+	background:  rgba(255, 255, 255, 0.8);
+	border-radius: 0px;
+}
+
+.form-control {
+	border-radius: 0px !important;
+	width: 45% !important;
+}
+
+.btn-block {
+	margin-top: 0%;
+	border-radius: 0px !important;
+	width: 95% !important;
+}
+
+.loginForm {}

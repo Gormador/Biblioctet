@@ -12,7 +12,10 @@ class DatabaseSeeder extends Seeder {
 		Eloquent::unguard();
 
 		$this->call('BiblioctetSeeder');
-		$this->command->info('Biblioctet seeds finished!');
+		$this->command->info('Biblioctet table seeds planted!');
+
+		$this->call('UserTableSeeder');
+		$this->command->info('User table seeds planted!');
 	}
 
 }

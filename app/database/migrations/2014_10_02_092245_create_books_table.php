@@ -16,11 +16,16 @@ class CreateBooksTable extends Migration {
 		{
 			$table->increments('id');
 
-			$table->string('name');
-			$table->string('author');
-			$table->string('publication_date');
-			$table->string('literary_genre');
-			$table->string('ISBN');
+			$table->string('name', 128);
+			$table->string('author', 128);
+			$table->string('language', 32);
+			$table->string('publication_date', 32);
+			$table->string('literary_genre', 32);
+			$table->string('ISBN', 17)->unique();
+			$table->string('programming_language', 32)->nullable(true);
+			$table->string('added_by', 32);
+			$table->string('description', 1024);
+			$table->string('thumbnailPath', 64);
 
 			$table->timestamps();
 		});
