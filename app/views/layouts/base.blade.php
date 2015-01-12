@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="book_flat.ico">
+    <link rel="icon" href="/book_flat.ico">
 
     <title>Biblioctet @section('title') @show</title>
 
@@ -32,20 +32,21 @@
   </head>
 
   <body>
-  @if(Session::has('categories'))
-  {{''; $categories = Session::get('categories') }}
-  {{-- This -the ''; part- is a bit of a "hack", as it prevents echoing the variable on the page but still assigns the default value as needed /in a blade template/. --}}
+    {{-- This -the ''; part- is a bit of a "hack", as it prevents echoing the variable on the page but still assigns the default value as needed /in a blade template/. --}}
     @if (Auth::check())
       {{''; $username = Auth::user()->username;}}
     @else
-      {{''; $username = 'NoName'}} 
+      {{''; $username = 'NoName'}}
+    @endif
+    @if (Session::has('categories'))
+      {{''; $categories = Session::get('categories') }}
     @endif
 
     {{ Navbar::create(NAVBAR::NAVBAR_TOP)
             ->withBrand('Biblioctet')
             ->withContent(
               Image::circle(
-                'book_flat_32x32.png', 
+                '/book_flat_32x32.png', 
                 'Logo'
               )
               // ->responsive()
@@ -143,9 +144,11 @@
               ->right()
             );
     }}
-  @endif
+  {{-- @endif --}}
 
-    @section('addContent') @show
+    @section('addContent')
+
+    @show
 
     <footer class="footer">
       <div class="container">

@@ -31,6 +31,23 @@ Route::get('chantier', array(
 	'uses'	=>	'HomeController@showChantier'
 ));
 
+// LIBRARY
+
+// Route::get('categories', array(
+// 	'as'	=>	'categories',
+// 	'uses'	=>	'LibraryController@showLibrary'
+// ));
+
+Route::get('ouvrage/{id?}', array(
+	'uses'	=>	'LibraryController@showBook'
+));
+
+// Route::get('unfoundBook', array(
+// 	'as'	=>	'unfoundBook',
+// 	'uses'	=>	'LibraryController@cantShow'
+// ));
+
+
 // REGISTER
 
 Route::get('register', array(

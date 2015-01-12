@@ -4,6 +4,20 @@ body {
     background-repeat: repeat;
 }
 
+.navbar {
+  background-color: #E8F3F8; 
+}
+
+hr {
+  border-width: 5px 0px 0px;
+  border-color: #BCE8F1;
+}
+
+.container > .alert-success {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .alert-success {
   margin-top: 40px;
   width: 74%;
@@ -16,10 +30,6 @@ body {
   width: 74%;
   margin-left: 13%;
   text-align: center;
-}
-
-.navbar {
-  background-color: #E8F3F8; 
 }
 
 /* RESPONSIVE CSS

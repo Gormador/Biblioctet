@@ -26,6 +26,33 @@ class BiblioctetSeeder extends Seeder {
 			'thumbnailPath'			=>	'dragonBook2nd.jpg'
 		));
 
+		$bookDesignPatterns = book::create(array(
+			'name'					=>	'Design Patterns: Elements of Reusable Object-Oriented Software',
+			'author'				=>	'The "Gang of Four"',
+			'language'				=>	'English',
+			'publication_date'		=>	'1994',
+			'literary_genre'		=>	'Programming',
+			'ISBN'					=>	'0-201-63361-2',
+			'programming_language'	=>	'Divers',
+			'added_by'				=>	'Admin',
+			'description'			=>	'Design Patterns: Elements of Reusable Object-Oriented Software is a software engineering book describing recurring solutions to common problems in software design.',
+			'thumbnailPath'			=>	'designPatterns.jpg'
+		));
+
+		$bookArtOfProgramming = book::create(array(
+			'name'					=>	'The Art of Computer Programming, Volume 1',
+			'author'				=>	'Donald Knuth',
+			'language'				=>	'English',
+			'publication_date'		=>	'1968',
+			'literary_genre'		=>	'Programming',
+			'ISBN'					=>	'0-201-03801-3',
+			'programming_language'	=>	'Divers',
+			'added_by'				=>	'Admin',
+			'description'			=>	'The Art of Computer Programming is a comprehensive monograph written by Donald Knuth that covers many kinds of programming algorithms and their analysis.',
+			'thumbnailPath'			=>	'artOfComputerProgramming.jpg'
+		));
+
+
 		$bookC = book::create(array(
 			'name'					=>	'The C Programming Language, Second Edition',
 			'author'				=>	'Brian Kernighan;Dennis Ritchie',

@@ -29,7 +29,6 @@ class HomeController extends BaseController {
 								->where('programming_language', '<>', 'NULL')
 								->get();
 
-		// $scienceBooksArray = $scienceBooks->to_array();
 		$scienceBooksArray = json_decode(json_encode((array) $scienceBooks), true);
 
 		Session::flash('scienceBooksArray', $scienceBooksArray);
@@ -44,13 +43,7 @@ class HomeController extends BaseController {
 
 		Session::flash('categories', $categories);
 
-		// foreach ($categories as $category) {
-		// 	var_dump($category);
-		// }
-
-
 		return View::make('home');
-					// ->with('smth', 'STUFF');
 	}
 
 	// NAVIGATION

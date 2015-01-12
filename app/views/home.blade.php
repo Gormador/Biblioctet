@@ -13,15 +13,10 @@
 @if(Session::has('registeredMessage'))
     {{''; $registeredMessage = Session::get('registeredMessage')}}
     {{ Alert::success( $registeredMessage)->close()}}
-@elseif(Session::has('loggedInMessage'))
+@endif
+@if(Session::has('loggedInMessage'))
     {{''; $loggedInMessage = Session::get('loggedInMessage')}}
     {{ Alert::success( $loggedInMessage)->close()}}
-{{-- @elseif(Session::has('scienceBooksArray'))
-    {{''; $scienceBooks = Session::get('scienceBooksArray')}} --
-    @foreach($scienceBooks as $scienceBook)
-      {{ Alert::warning( $scienceBook)}}
-    @endforeach
---}}
 @endif
 
 {{-- Content above the carousel. --}}
@@ -95,23 +90,27 @@
             @foreach($authorsArray as $author)
               @if(!isset($authors))
                 {{''; $authors = $author}}
+              @else
+                {{''; $authors = $authors.', '.$author}}
               @endif
-              {{''; $authors = $authors.', '.$author}}
             @endforeach 
-            <h4>Auteurs : {{ $authors }}</h5>
+            <h4>Auteur(s) : {{ $authors }}</h5>
 
             <h5>Date de publication : {{ $scienceBooks[0]['publication_date']}}</h5>
 
             <h5>Langage(s) de programmation concerné(s) : {{ $scienceBooks[0]['programming_language']}}</h5>
 
+            <!--
             <h5>Description :</h6>
             <p>{{ $scienceBooks[0]['description']}}</p>
-
+            -->
             {{ Button::primary('Voir la fiche détaillée')
                           ->block()
-                          ->asLinkTo('chantier');
-                          // ->asLinkTo('ouvrage/'.$scienceBooks[0]['id']);
+                          // ->asLinkTo('chantier');
+                          ->asLinkTo('ouvrage/'.$scienceBooks[0]['id']);
             }}
+
+            {{''; $authors=NULL}}
           </div>
         </div>
       </div>
@@ -130,23 +129,26 @@
             @foreach($authorsArray as $author)
               @if(!isset($authors))
                 {{''; $authors = $author}}
+              @else
+                {{''; $authors = $authors.', '.$author}}
               @endif
-              {{''; $authors = $authors.', '.$author}}
             @endforeach 
-            <h4>Auteurs : {{ $authors }}</h5>
+            <h4>Auteur(s) : {{ $authors }}</h5>
 
             <h5>Date de publication : {{ $scienceBooks[1]['publication_date']}}</h5>
 
             <h5>Langage(s) de programmation concerné(s) : {{ $scienceBooks[1]['programming_language']}}</h5>
 
-            <h5>Description :</h6>
+   <!--          <h5>Description :</h6>
             <p>{{ $scienceBooks[1]['description']}}</p>
-
+ -->
             {{ Button::primary('Voir la fiche détaillée')
                           ->block()
-                          ->asLinkTo('chantier');
-                          // ->asLinkTo('ouvrage/'.$scienceBooks[1]['id']);
+                          // ->asLinkTo('chantier');
+                          ->asLinkTo('ouvrage/'.$scienceBooks[1]['id']);
             }}
+
+            {{''; $authors = NULL}}
           </div>
         </div>
       </div>
@@ -165,23 +167,26 @@
             @foreach($authorsArray as $author)
               @if(!isset($authors))
                 {{''; $authors = $author}}
+              @else
+                {{''; $authors = $authors.', '.$author}}
               @endif
-              {{''; $authors = $authors.', '.$author}}
             @endforeach 
-            <h4>Auteurs : {{ $authors }}</h5>
+            <h4>Auteur(s) : {{ $authors }}</h5>
 
             <h5>Date de publication : {{ $scienceBooks[2]['publication_date']}}</h5>
 
             <h5>Langage(s) de programmation concerné(s) : {{ $scienceBooks[2]['programming_language']}}</h5>
 
-            <h5>Description :</h6>
-            <p>{{ $scienceBooks[2]['description']}}</p>
+<!--             <h5>Description :</h6>
+            <p>{{ $scienceBooks[2]['description']}}</p> -->
 
             {{ Button::primary('Voir la fiche détaillée')
                           ->block()
-                          ->asLinkTo('chantier');
-                          // ->asLinkTo('ouvrage/'.$scienceBooks[2]['id']);
+                          // ->asLinkTo('chantier');
+                          ->asLinkTo('ouvrage/'.$scienceBooks[2]['id']);
             }}
+
+            {{''; $authors = NULL}}
           </div>
         </div>
       </div>

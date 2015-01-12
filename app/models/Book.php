@@ -43,10 +43,12 @@ class Book extends Eloquent {
 		$this->attributes['thumbnailPath'] = 'ressources/images/thumbnails/'.$name;
 	}
 
-	public static function boot()
-    {
-        parent::boot();
+	// public static function boot()
+ //    {
+ //    	parent::boot();
 
-        // Setup event bindings...
-    }
+ //    	static::creating() {
+    		
+ //    	}
+ //    }
 }
