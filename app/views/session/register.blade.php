@@ -10,6 +10,8 @@
 
 <div class="container" id="register">
 
+	{{	Alert::warning('Les inscriptions sont fonctionnelles mais ne servent pour le moment /strictement/ à rien...')->close()}}
+
 	{{ 	Form::inline(
 			array(
 				'url' 		=>	'register',

@@ -33,16 +33,6 @@ class HomeController extends BaseController {
 
 		Session::flash('scienceBooksArray', $scienceBooksArray);
 
-
-		$categories = DB::table('books')
-								->select('literary_genre')
-								->groupBy('literary_genre')
-								->get();
-
-		$categories = json_decode(json_encode((array) $categories), true);
-
-		Session::flash('categories', $categories);
-
 		return View::make('home');
 	}
 

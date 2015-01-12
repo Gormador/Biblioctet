@@ -45,7 +45,7 @@
 							@if(isset($similarBooks[$i]))
 								<div class="col-md-4">
 									{{''; $url = URL::to('ouvrage/'.$similarBooks[$i]['id'])}}
-									<a href="{{ $url}}">{{ Image::thumbnail('/'.$similarBooks[$i]['thumbnailPath'])->responsive()}}
+									<a href="{{ $url}}">{{ Image::thumbnail('/'.$similarBooks[$i]['thumbnailPath'])->responsive()}}</a>
 								</div>
 							@else
 							@endif

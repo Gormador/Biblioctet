@@ -38,8 +38,11 @@
     @else
       {{''; $username = 'NoName'}}
     @endif
-    @if (Session::has('categories'))
-      {{''; $categories = Session::get('categories') }}
+    @if (!Session::has('categoriesArray'))
+      {{ App::make('LibraryController')->doCategoriesArray()}}
+      {{''; $categoriesArray = Session::get('categoriesArray') }}
+    @else
+      {{''; $categoriesArray = Session::get('categoriesArray') }}
     @endif
 
     {{ Navbar::create(NAVBAR::NAVBAR_TOP)
@@ -58,24 +61,16 @@
                     'title' =>  'Accueil',
                     'link'  =>  URL::route('home')
                   ),
+                )
+              )
+            )
+            ->withContent(
+              Navigation::pills(
+                array(
                   array(
                     'Catégories',
-                    array(
-                      array(
-                        'title' =>  'Caté1',
-                        'link'  =>  '#'
-                      ),
-                      array(
-                        'title' =>  'Caté2',
-                        'link'  =>  '#'
-                      ),
-                      Navigation::NAVIGATION_DIVIDER,
-                      array(
-                        'title' =>  'Toutes les catégories',
-                        'link'  =>  'chantier'
-                      ),
-                    )
-                  )
+                    $categoriesArray
+                  ),
                 )
               )
             )

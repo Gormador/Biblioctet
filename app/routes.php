@@ -33,10 +33,10 @@ Route::get('chantier', array(
 
 // LIBRARY
 
-// Route::get('categories', array(
-// 	'as'	=>	'categories',
-// 	'uses'	=>	'LibraryController@showLibrary'
-// ));
+Route::get('librairie', array(
+	'as'	=>	'librairie',
+	'uses'	=>	'LibraryController@showLibrary'
+));
 
 Route::get('ouvrage/{id?}', array(
 	'uses'	=>	'LibraryController@showBook'
