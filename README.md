@@ -6,7 +6,7 @@ Repo for our "Advanced web programmation" 4th year class at the ESIEA. Teacher: 
 
 ATTENTION : Nous utilisons des packages additionnels pour notre site.
 
-Veillez à ajouter (après avoir au fichier app/config/app.php
+Veillez à ajouter au fichier app/config/app.php
 
 	Dans la liste des providers : 
 		'Bootstrapper\BootstrapperServiceProvider',
