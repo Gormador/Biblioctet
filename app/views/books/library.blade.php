@@ -25,6 +25,7 @@
 		<h1 class="text-center">La Biblioctet</h1>
 	</div>
 	<div class="container">
+		<h4>Ouvrages sur les sciences informatiques</h4>
 		<hr>
 		{{''; $i=1}}
 		@foreach($programmingBooks as $programmingBook)
@@ -44,6 +45,7 @@
 		@endforeach
 	</div>
 	<div class="container">
+		<h4>Ouvrages de divertissement</h4>
 		<hr>
 		{{''; $i=1}}
 		@foreach($nerdBooks as $nerdBook)

@@ -40,6 +40,7 @@
 					}}
 					<hr>
 					@if(Session::has('similarBooks'))
+						<h5>Ouvrages similaires :</h5>
 						{{''; $similarBooks = Session::get('similarBooks') }}
 						@for($i=0; $i<count($similarBooks); $i++)
 							@if(isset($similarBooks[$i]))

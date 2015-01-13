@@ -31,7 +31,7 @@ class LibraryController extends BaseController
 		}
 		else
 		{	
-			$this->getSimilarBooks('literary_genre');
+			$this->getSimilarBooks('literary_genre', $book);
 				
 			return View::make('books.nerdBook');
 		}
